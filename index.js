@@ -1,6 +1,11 @@
 
 function sum(fromN, toN) {
-  // Sum all the values from fromN up to toN
+  let total = 0;
+  if(toN === fromN) {
+    return total + fromN;
+  } else {
+    return toN + sum(fromN, toN - 1);
+  }
 }
 
 module.exports = sum;
